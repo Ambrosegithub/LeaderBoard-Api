@@ -69,3 +69,13 @@ body {
   align-self: flex-end;
   box-shadow: 2px 2px #000;
 }
+
+#genNew {
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: rgb(250, 240, 240);
+  color: rgb(254, 82, 52);
+  width: 100px;
+  align-self: flex-end;
+  font-weight: 300;
+}
