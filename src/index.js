@@ -1,15 +1,16 @@
- import './index.css';
-import { fetchScore , addToScore } from './modules/app.js';
-const formInput = document.querySelector('#form-input');
-const user_input = document.querySelector('#user_input');
-const score_input = document.querySelector('#score_input');
-const refresh_btn = document.querySelector('#refresh-btn');
+import './index.css';
+import { fetchScore, addToScore } from './modules/app.js';
 
-formInput.addEventListener('submit', (el)=>{
+const formInput = document.querySelector('#form-input');
+const userInput = document.querySelector('#user_input');
+const scoreInput = document.querySelector('#score_input');
+const refreshBtn = document.querySelector('#refresh-btn');
+
+formInput.addEventListener('submit', (el) => {
   el.preventDefault();
-  addToScore(user_input.value, score_input.value)
+  addToScore(userInput.value, scoreInput.value);
   formInput.reset();
 });
- refresh_btn.addEventListener('click', ()=>{
-fetchScore()
- })
+refreshBtn.addEventListener('click', () => {
+  fetchScore();
+});
