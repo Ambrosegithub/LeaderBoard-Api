@@ -18,6 +18,8 @@ body {
   margin-bottom: 2%;
   text-align: left;
   margin-left: 6%;
+  background-color: chocolate;
+  color: thistle;
 }
 
 .container {
@@ -33,6 +35,7 @@ body {
   flex-direction: column;
   border: 1px solid #000;
   width: 400px;
+  background-color: coral;
 }
 
 .refresh-score {
@@ -53,15 +56,23 @@ body {
 .score-list {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .score-list li {
   list-style: none;
   gap: 6px;
+  padding: 4px;
+  font-size: 1.5rem;
 }
 
 .score-list li:nth-child(even) {
   background-color: #ddd;
+  color: teal;
+}
+
+.score-list li:nth-child(odd) {
+  color: #ddd;
 }
 
 #submit-btn {
@@ -78,4 +89,34 @@ body {
   width: 100px;
   align-self: flex-end;
   font-weight: 300;
+}
+
+footer {
+  text-align: center;
+  border: 2px dotted coral;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: monospace;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 769px) {
+  body {
+    width: 100%;
+  }
+
+  .score-list-div {
+    margin-left: 2%;
+    width: 100%;
+    transition: all 4s linear;
+  }
+
+  #leaderboard-headlng {
+    width: 50%;
+    margin-top: 16px;
+  }
 }
